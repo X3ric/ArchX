@@ -41,7 +41,7 @@ done
 
 if [[ ! $AUR_HELPER == none ]]; then
   cd ~
-  git clone "https://aur.AwesomeArchlinux.org/$AUR_HELPER.git"
+  git clone "https://aur.archlinux.org/$AUR_HELPER.git"
   cd ~/$AUR_HELPER
   makepkg -si --noconfirm
   # sed $INSTALL_TYPE is using install type to check for MINIMAL installation, if it's true, stop

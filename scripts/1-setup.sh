@@ -30,7 +30,7 @@ echo -ne "
 -------------------------------------------------------------------------
 "
 pacman -S --noconfirm --needed pacman-contrib curl
-pacman -S --noconfirm --needed reflector rsync grub AwesomeArch-install-scripts git
+pacman -S --noconfirm --needed reflector rsync grub arch-install-scripts git
 cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak
 
 nc=$(grep -c ^processor /proc/cpuinfo)

@@ -117,7 +117,7 @@ select_option() {
         local curr_row=$2
         local curr_idx=0
 
-        local idx=0
+        local idx=0 
         local row=0
         local col=0
         
@@ -223,7 +223,7 @@ esac
 }
 # @description Detects and sets timezone. 
 timezone () {
-# Added this from AwesomeArch wiki https://wiki.AwesomeArchlinux.org/title/System_time
+# Added this from Arch wiki https://wiki.archlinux.org/title/System_time
 time_zone="$(curl --fail https://ipapi.co/timezone)"
 echo -ne "
 System detected your timezone to be '$time_zone' \n"
@@ -248,7 +248,7 @@ esac
 keymap () {
 echo -ne "
 Please select key board layout from this list"
-# These are default key maps as presented in official AwesomeArch repo AwesomeArchinstall
+# These are default key maps as presented in official Arch repo archinstall
 options=(us by ca cf cz de dk es et fa fi fr gr hu il it lt lv mk nl no pl ro ru sg ua uk)
 
 select_option $? 4 "${options[@]}"
