@@ -58,10 +58,11 @@ _________________________/
         #echo "awesome.restart()" | awesome-client
     fi
 
-    echo "XDG_CURRENT_DESKTOP=Unity" >> /etc/environment 
-    echo "QT_QPA_PLATFORMTHEME=gtk2" >> /etc/environment 
+    #echo "XDG_CURRENT_DESKTOP=Unity" >> /etc/environment 
+    #echo "QT_QPA_PLATFORMTHEME=gtk2" >> /etc/environment 
     papirus-folders -C violet --theme ePapirus-Dark
     echo "reboot to apply"
     #remove to start and delete
     sed -i '/awesome.sh/d' /home/$choice/.zshrc && rm -R /home/$choice/awesome.sh 
+    echo "start in the tty shell to select wm"
 fi
