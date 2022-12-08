@@ -1,0 +1,9 @@
+zsh-theme-powerlevel10k-git
+rmtrash
+--END OF MINIMAL INSTALL--
+uget-integrator-firefox
+ctpv-git
+picom-pijulius-git
+papirus-folders-git
+nerd-fonts-jetbrains-mono
+mpd-mpdris
