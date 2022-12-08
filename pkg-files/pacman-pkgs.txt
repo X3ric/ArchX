@@ -30,11 +30,6 @@ python-pip
 --END OF MINIMAL INSTALL--
 ripgrep
 network-manager-applet
-gstreamer
-gst-plugins-good
-gst-plugins-bad
-gst-plugins-base
-gst-plugins-ugly
 bluez
 bluez-libs
 bluez-utils

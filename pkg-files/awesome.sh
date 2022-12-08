@@ -38,18 +38,17 @@ _________________________/
         smbpasswd -a $choice
     fi
 
-    read -p 'Printers drivers. true/false: ' pr
-    if [[ $pr == "true" ]]; then
-        pacman -S --needed --noconfirm cups
-        pacman -S --needed --noconfirm cups-pdf
-        pacman -S --needed --noconfirm ghostscript
-        pacman -S --needed --noconfirm gsfonts
-        pacman -S --needed --noconfirm gutenprint
-        pacman -S --needed --noconfirm gtk3-print-backends
-        pacman -S --needed --noconfirm libcups
-        pacman -S --needed --noconfirm system-config-printer
-        systemctl enable cups.service
-    fi
+    #read -p 'Printers drivers. true/false: ' pr
+    #if [[ $pr == "true" ]]; then
+    #    pacman -S --needed --noconfirm cups
+    #    pacman -S --needed --noconfirm cups-pdf
+    #    pacman -S --needed --noconfirm ghostscript
+    #    pacman -S --needed --noconfirm gsfonts
+    #    pacman -S --needed --noconfirm gutenprint
+    #    pacman -S --needed --noconfirm gtk3-print-backends
+    #    pacman -S --needed --noconfirm libcups
+    #    pacman -S --needed --noconfirm system-config-printer
+    #fi
 
     read -p 'Change screen size. true/false: ' wm
     if [[ $wm == "true" ]]; then
