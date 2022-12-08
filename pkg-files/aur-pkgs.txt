@@ -3,6 +3,7 @@ rmtrash
 --END OF MINIMAL INSTALL--
 uget-integrator-firefox
 ctpv-git
+tbsm
 picom-pijulius-git
 papirus-folders-git
 nerd-fonts-jetbrains-mono

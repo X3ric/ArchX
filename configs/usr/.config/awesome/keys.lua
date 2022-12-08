@@ -146,7 +146,7 @@ hotkeys_popup.add_group_rules("X-awesome", { color = "#ffffff" })
 
 keys.globalkeys = gears.table.join(         
     awful.key({ }, "Print" , function () awful.spawn.with_shell("cd Pictures && scrot 'Arch-%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'notify-send 'Screenshot' $f && timeout 0.5 feh --title Preview --scale-down -s -g 768x432 $f' ") end,{description = "screenshot" , group = "X-awesome"}),
-    awful.key({ "Shift" }, "Print" , function () awful.spawn.with_shell("cd Pictures && scrot -s 'Arch-%Y-%m-%d-%s_screencrop_$wx$h.jpg' -e 'notify-send 'Screenshot' $f && timeout 0.5 feh --title Preview --scale-down -s $f' ") end,{description = "screencrop" , group = "X-awesome"}),
+    awful.key({ "Shift" }, "Print" , function () awful.spawn.with_shell("cd Pictures && scrot -l  mode=edge,style=dash,width=1,opacity=100 -s 'Arch-%Y-%m-%d-%s_screencrop_$wx$h.jpg' -e 'notify-send 'Screenshot' $f && timeout 0.5 feh --title Preview --scale-down -s $f' ") end,{description = "screencrop" , group = "X-awesome"}),
     awful.key({ modkey }, "F1" , hotkeys_popup.show_help,{description = "show help" , group="X-awesome"}),
     awful.key({ modkey }, "F2" , function () awful.util.spawn( "rofi -show drun -theme applications -show-icons" ) end,{description = "menu appfinder" , group = "X-awesome"}),
     awful.key({ modkey }, "F3" , function () awful.spawn.with_shell("$HOME/.config/awesome/scripts/dock.sh") end,{description = "menu appfavourites" , group = "X-awesome"}),
@@ -348,9 +348,9 @@ keys.globalkeys = gears.table.join(keys.globalkeys,
     awful.key({ }, "XF86AudioPrev" , function () awful.util.spawn("mpc prev") beautiful.mpd.update() end),
     awful.key({ }, "XF86AudioStop" , function () awful.util.spawn("mpc stop") beautiful.mpd.update() end),
     --volume-adjust keys   enable in theme line 107 and disable keys in volume icon
-    awful.key({ }, "XF86AudioRaiseVolume" , function () awful.util.spawn("amixer -D pulse set Master 5%+" , false) awesome.emit_signal("volume_change") beautiful.volume.update() end),
-    awful.key({ }, "XF86AudioLowerVolume" , function () awful.util.spawn("amixer -D pulse set Master 5%-" , false) awesome.emit_signal("volume_change") beautiful.volume.update() end),
-    awful.key({ }, "XF86AudioMute" , function () awful.util.spawn("amixer -D pulse set Master toggle" , false) awesome.emit_signal("volume_change") beautiful.volume.update() end)
+    awful.key({ }, "XF86AudioRaiseVolume" , function () awful.util.spawn("pamixer -i 1" , false) awesome.emit_signal("volume_change") beautiful.volume.update() end),
+    awful.key({ }, "XF86AudioLowerVolume" , function () awful.util.spawn("pamixer -d 1" , false) awesome.emit_signal("volume_change") beautiful.volume.update() end),
+    awful.key({ }, "XF86AudioMute" , function () awful.util.spawn("pamixer --toggle-mute" , false) awesome.emit_signal("volume_change") beautiful.volume.update() end)
     --Media keys supported by vlc, spotify, audacious, xmm2, firefox ..
     --awful.key({control}, "F9" , function() awful.util.spawn("playerctl play-pause" , false) end,{description = "play/pause" , group = "music"}),
     --awful.key({control}, "F12" , function() awful.util.spawn("playerctl next" , false) end,{description = "next" , group = "music"}),

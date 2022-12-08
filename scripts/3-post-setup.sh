@@ -55,23 +55,23 @@ echo -e "Updating grub..."
 grub-mkconfig -o /boot/grub/grub.cfg
 echo -e "All set!"
 
-echo -ne "
-_______________________________________________________________
-                      Enabling Login Display Manager          /
-_____________________________________________________________/
-
-"
-if [[ ! "${DESKTOP_ENV}" == "arch"  ]]; then
-git clone --recurse-submodules https://github.com/fairyglade/ly
-cd ly
-make
-make install installsystemd
-cd ..
-#sed -i 's/^#tty = 2/tty = 1/' /etc/ly/config.ini
-sudo systemctl enable ly.service
-systemctl disable getty@tty2.service
-fi
-
+#echo -ne "
+#_______________________________________________________________
+#                      Enabling Login Display Manager          /
+#_____________________________________________________________/
+#
+#"
+#if [[ ! "${DESKTOP_ENV}" == "arch"  ]]; then
+#git clone --recurse-submodules https://github.com/fairyglade/ly
+#cd ly
+#make
+#make install installsystemd
+#cd ..
+##sed -i 's/^#tty = 2/tty = 1/' /etc/ly/config.ini
+#sudo systemctl enable ly.service
+#systemctl disable getty@tty2.service
+#fi
+#
 echo -ne "
 ______________________________________________________
                       Enabling Essential Services    /

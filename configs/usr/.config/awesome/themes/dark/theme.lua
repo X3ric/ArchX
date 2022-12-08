@@ -224,7 +224,8 @@ theme.mpd = lain.widget.mpd({
             x = " "
         end
 
-        widget:set_markup(markup.font(theme.font," " .. markup(gray, x) .. markup(gray,file)))
+        widget:set_markup(markup.font(theme.font," " .. markup(gray, x)))
+        --widget:set_markup(markup.font(theme.font," " .. markup(gray, x) .. markup(gray,file)))
         --widget:set_markup(markup.font(theme.font,markup(gray, title) .. ctime .. "/" .. time .. "♫ "))
         --widget:set_markup(markup.font(theme.font,markup(gray, artist) .. title .. ctime .. "/" .. time .. "♫ "))
     end
@@ -279,31 +280,33 @@ voluicon:buttons(awful.util.table.join(
                                      awful.util.spawn("pavucontrol")
                                end),
                                awful.button({}, 4, function ()
-                                     awful.util.spawn("amixer -D pulse set Master 5%-", false)
+                                     awful.util.spawn("pamixer -d 5", false)
                                      awesome.emit_signal("volume_change")
                                      theme.volume.update()
                                end),
                                awful.button({}, 5, function ()
-                                     awful.util.spawn("amixer -D pulse set Master 5%+", false)
+                                     awful.util.spawn("pamixer -i 5", false)
                                      awesome.emit_signal("volume_change")
                                      theme.volume.update()
                                end)
 ))
 
-theme.volume = lain.widget.alsa({
-    --togglechannel = "IEC958,3",
+theme.volume = lain.widget.pipewire({
     settings = function()
-        if volume_now.status == "off" then
+        if volume_now.level == nil or volume_now.level == "" then
+            volume_now.level = ""
             voluicon:set_image(theme.volume_off_icon)
-        elseif tonumber(volume_now.level) == 0 then
-            voluicon:set_image(theme.volume_off_icon)
-        elseif tonumber(volume_now.level) <= 50 then
-            voluicon:set_image(theme.volume_low_icon)
-        elseif tonumber(volume_now.level) >= 50 then
-            voluicon:set_image(theme.volume_icon)
-        end
+            widget:set_markup(markup.font(theme.font, "" .. string.format(volume_now.level) ))
+        else
+            if tonumber(volume_now.level) == 0 then
+                voluicon:set_image(theme.volume_off_icon)
+            elseif tonumber(volume_now.level) <= 50 then
+                voluicon:set_image(theme.volume_low_icon)
+            elseif tonumber(volume_now.level) >= 50 then
+                voluicon:set_image(theme.volume_icon)
+            end
         widget:set_markup(markup.font(theme.font, "" .. string.format(volume_now.level) .. "%" ))
-        
+        end  
     end
 })
 
@@ -312,12 +315,12 @@ theme.volume.widget:buttons(awful.util.table.join(
                                      awful.util.spawn("pavucontrol")
                                end),
                                awful.button({}, 4, function ()
-                                     awful.util.spawn("amixer -D pulse set Master 5%-", false)
+                                     awful.util.spawn("pamixer -d 5", false)
                                      awesome.emit_signal("volume_change")
                                      theme.volume.update()
                                end),
                                awful.button({}, 5, function ()
-                                     awful.util.spawn("amixer -D pulse set Master 5%+", false)
+                                     awful.util.spawn("pamixer -i 5", false)
                                      awesome.emit_signal("volume_change")
                                      theme.volume.update()
                                end)

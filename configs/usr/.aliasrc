@@ -28,6 +28,7 @@ export EDITOR=nvim
 
 alias pacman-update='sudo pacman-mirrors --geoip'
 
+alias start='tbsm --quiet --theme riddler'
 alias ls='lsd'
 #alias ll='ls -l'
 # ls, the common ones I use a lot shortened for rapid fire usage

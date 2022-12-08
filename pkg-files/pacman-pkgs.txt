@@ -12,6 +12,7 @@ linux-headers
 usbutils
 xdg-user-dirs
 pavucontrol
+pamixer
 pipewire
 pipewire-alsa
 pipewire-pulse

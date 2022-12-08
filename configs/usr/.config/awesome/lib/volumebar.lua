@@ -81,11 +81,15 @@ awesome.connect_signal("volume_change",
    function()
       -- set new volume value
       awful.spawn.easy_async_with_shell(
-         "amixer sget Master | grep 'Right:' | awk -F '[][]' '{print $2}'| sed 's/[^0-9]//g'",
+         "pamixer --get-volume-human | grep -Eo '[[:digit:]]+'",
+         --"amixer sget Master | grep 'Right:' | awk -F '[][]' '{print $2}'| sed 's/[^0-9]//g'",
          function(stdout)
             local volume_level = tonumber(stdout)
-            volume_bar.value = volume_level 
-            if (volume_level > 50) then
+            volume_bar.value = volume_level
+
+            if (volume_level == nil) then
+               volume_icon:set_image(beautiful.volume_off_icon)
+            elseif (volume_level > 50) then
                volume_icon:set_image(beautiful.volume_icon)
             elseif (volume_level > 0) then
                volume_icon:set_image(beautiful.volume_low_icon)
