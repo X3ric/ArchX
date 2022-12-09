@@ -179,7 +179,7 @@ keys.globalkeys = gears.table.join(
     awful.key({ modkey }, "Right" , awful.tag.viewnext,{description = "view next" , group = "X-tag"}),
     awful.key({ modkey }, "h" , awful.tag.viewprev,{description = "view previous" , group = "X-tag"}),
     awful.key({ modkey }, "l" , awful.tag.viewnext,{description = "view next" , group = "X-tag"}),
-    awful.key({ modkey }, "Escape" , awful.tag.history.restore,{description = "go back" , group = "X-tag"}),
+    awful.key({ altkey }, "Escape" , awful.tag.history.restore,{description = "go back" , group = "X-tag"}),
     -- Layout
     --awful.key({ altkey , "Control" }, "l" , function () awful.tag.incmwfact( 0.05) end,{description = "layout increase master width factor" , group = "X-awesome"}),
     --awful.key({ altkey , "Control" }, "h" , function () awful.tag.incmwfact(-0.05) end,{description = "layout decrease master width factor" , group = "X-awesome"}),

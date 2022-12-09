@@ -110,7 +110,6 @@ theme.titlebar_maximized_button_normal_inactive = theme.dir .. "/icons/titlebar/
 theme.titlebarheight = 17
 
 awful.util.tagnames = {"⋊","⋈","⋉"}
---https://www.madeintext.com/text-symbols/
 
 local markup     = lain.util.markup
 local separators = lain.util.separators

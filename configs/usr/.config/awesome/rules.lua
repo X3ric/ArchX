@@ -44,10 +44,10 @@ function rules.create(clientkeys, clientbuttons)
       
       -- Titlebars
       --{ rule_any = { type = { "dialog", "normal" } },properties = {titlebars_enabled = beautiful.titlebars_enabled} },   --simil windows titlebars whit all options       
+      { rule_any = { class = "firefox"},properties = {tag = awful.util.tagnames[2], switchtotag = true} },
       { rule = { class = "firefox" , instance = "Toolkit" },properties = {titlebars_enabled = true, floating = true , sticky = true} },
-      { rule = { class = "discord" , role = "browser-window"},properties = {titlebars_enabled = false ,screen = 1, tag = awful.util.tagnames[3], switchtotag = true} }, 
+      { rule = { class = "discord" , role = "browser-window"},properties = {titlebars_enabled = false ,screen = 1, tag = awful.util.tagnames[2], switchtotag = true} }, 
       --{ rule = { class = "kitty" },properties = { screen = 1, tag = awful.util.tagnames[2], switchtotag = true  } },
-      --{ rule = { class = "Xfce4-terminal" , role ="xfce4-terminal-dropdown"},properties = {sticky = true} },
       --{ rule = { class = "pavucontrol , Pavucontrol" },properties = { screen = 1, tag = awful.util.tagnames[1], switchtotag = true  } },
       --{ rule = { class = "Thunar" },properties = { maximized = false, floating = false } },       
       --{ rule = { class = apps.browser },properties = { screen = 1, tag = awful.util.tagnames[1], switchtotag = true  } },

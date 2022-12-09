@@ -1,0 +1,9 @@
+{"timestamp":5882393,"category":"nimbus_events","name":"validation_failed","extra":{"feature":"nimbus-qa-1","reason":"invalid-feature","experiment":"nimbus-pref-qa-1-4week-experiment"}}
+{"timestamp":5882394,"category":"nimbus_events","name":"validation_failed","extra":{"experiment":"nimbus-pref-qa-1-4week-rollout","feature":"nimbus-qa-1","reason":"invalid-feature"}}
+{"timestamp":5882394,"category":"nimbus_events","name":"validation_failed","extra":{"reason":"invalid-feature","feature":"nimbus-qa-2","experiment":"nimbus-pref-qa-2-4week-experiment"}}
+{"timestamp":5882394,"category":"nimbus_events","name":"validation_failed","extra":{"reason":"invalid-feature","experiment":"nimbus-pref-qa-2-4week-rollout","feature":"nimbus-qa-2"}}
+{"timestamp":5910367,"category":"perf","name":"page_load","extra":{"load_type":"NORMAL","js_exec_time":"138","response_time":"160","fcp_time":"478","load_time":"766"}}
+{"timestamp":5918175,"category":"perf","name":"page_load","extra":{"load_time":"5807","fcp_time":"4427","load_type":"STOP","js_exec_time":"114","response_time":"662"}}
+{"timestamp":5926871,"category":"perf","name":"page_load","extra":{"load_time":"2391","load_type":"LINK","response_time":"866","fcp_time":"1247","js_exec_time":"64"}}
+{"timestamp":5939715,"category":"perf","name":"page_load","extra":{"fcp_time":"1548","load_type":"LINK","response_time":"575","load_time":"2618","js_exec_time":"65"}}
+{"timestamp":5943462,"category":"perf","name":"page_load","extra":{"load_type":"LINK","js_exec_time":"80","fcp_time":"1322","response_time":"919","load_time":"2005"}}

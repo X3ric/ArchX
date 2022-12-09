@@ -1,0 +1,4 @@
+{"timestamp":5882393,"category":"nimbus_events","name":"validation_failed","extra":{"feature":"nimbus-qa-1","reason":"invalid-feature","experiment":"nimbus-pref-qa-1-4week-experiment"}}
+{"timestamp":5882394,"category":"nimbus_events","name":"validation_failed","extra":{"experiment":"nimbus-pref-qa-1-4week-rollout","feature":"nimbus-qa-1","reason":"invalid-feature"}}
+{"timestamp":5882394,"category":"nimbus_events","name":"validation_failed","extra":{"reason":"invalid-feature","feature":"nimbus-qa-2","experiment":"nimbus-pref-qa-2-4week-experiment"}}
+{"timestamp":5882394,"category":"nimbus_events","name":"validation_failed","extra":{"reason":"invalid-feature","experiment":"nimbus-pref-qa-2-4week-rollout","feature":"nimbus-qa-2"}}

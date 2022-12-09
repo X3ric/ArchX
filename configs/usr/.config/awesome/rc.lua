@@ -117,9 +117,13 @@ awful.layout.suit.tile.left.mirror = true
 
 awful.layout.layouts = {
 awful.layout.suit.magnifier,
-awful.layout.suit.floating,
 awful.layout.suit.max,
+awful.layout.suit.magnifier,
+awful.layout.suit.floating,
+awful.layout.suit.tile.left,
 awful.layout.suit.tile,
+lain.layout.centerwork,
+lain.layout.centerwork.horizontal,
 awful.layout.suit.tile.left,
 awful.layout.suit.tile.bottom,
 awful.layout.suit.tile.top,
@@ -134,8 +138,6 @@ awful.layout.suit.tile.top,
 --awful.layout.suit.corner.se,
 --lain.layout.cascade,
 --lain.layout.cascade.tile,
-lain.layout.centerwork,
-lain.layout.centerwork.horizontal,
 --lain.layout.termfair,
 --lain.layout.termfair.center,
 }
