@@ -1,0 +1,6 @@
+#!/bin/bash
+git init
+git add configs pkg-files scripts archx.sh README.md
+git commit -m "Updated"
+git remote add origin https://github.com/X3ric/ArchX
+git push -f origin master
