@@ -5,7 +5,6 @@ xorg-drivers
 xorg-xinit
 xterm
 pavucontrol
-pamixer
 pipewire
 pipewire-alsa
 pipewire-pulse
@@ -16,71 +15,86 @@ samba
 nss-mdns
 awesome
 --END OF MINIMAL INSTALL--
-bat
+# Utils
+network-manager-applet
+polkit-gnome
+unclutter
+blueman
+arandr
+dust
+# Cli Tools
+ncdu
 xdotool
 xclip
-aria2
-uget
-cbatticon
-gnome-disk-utility
-xfce4-clipman-plugin
-papirus-icon-theme
-thunar
-thunar-archive-plugin
-thunar-volman
-thunar-media-tags-plugin
-tumbler
-w3m
-gucharmap
-engrampa
-dconf-editor
-conky
-git-delta
+cmake
 github-cli
-glow
 yt-dlp
 lf
-ueberzug
 jq
-highlight
-tldr
-unclutter
-kvantum
-npm
-noto-fonts-emoji
-ttf-dejavu
-ttf-fira-code
-kitty
-playerctl
-scrot
-mpv
-mpc
-mpd
-ncmpcpp
+atool
+chafa
+bat
 ffmpeg
 ffmpegthumbnailer
-blueman
-dmenu
-dust
-ncdu
-polkit-gnome
+brightnessctl
+poppler
+aria2
+tmux
+broot
+btop
+git-delta
+glow
+highlight
+# Apps Utils
+gucharmap
+xfce4-clipman-plugin
+dconf-editor
+slop
 gpick
+scrot
+# Archive
+engrampa
+# Apps
+kitty
+feh
 rofi
 rofi-emoji
-rofi-calc
 firefox
-feh
-imagemagick
-arandr
-cmake
+f3d
+# Neovim
 neovim
-dunst
-tmux
-rofi
-feh
+npm
+nodejs
+# Mpv
+mpd
+mpc
+mpv
+ncmpcpp
+# Thunar
+thunar
+thunar-volman
+thunar-archive-plugin
+thunar-media-tags-plugin
+tumbler
+# Qt
 qt5ct
-btop
-slop
-brightnessctl
-broot
-screenkey
+kvantum
+# Fonts
+noto-fonts-emoji
+noto-fonts-cjk
+ttf-dejavu
+ttf-fira-code
+# Python deps 
+python
+python-gobject
+python-dbus
+python-mutagen
+python-mpd2
+python-pytesseract
+tesseract-data-eng
+# Globalmenu deps
+appmenu-gtk-module
+libdbusmenu-gtk2
+libdbusmenu-gtk3
+gtk3
+bamf

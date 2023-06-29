@@ -17,7 +17,7 @@ This directory contains scripts needed for installation:
 ### Make a new  one?
 
 Additionally you can create a new installation choice. Let's say you want to create an option for 
-`${name}.sh` (replace `${name}` with the name of your choice, e.g., `awesome.sh`). This script will be placed in the `scripts` directory use `awesome.sh` as a base and uncomment line 22 and replace $wm with your wanted wm to make also change last exec line in the xinitrc
+`${name}.sh` (replace `${name}` with the name of your choice, e.g., `awesome.sh`). This script will be placed in the `scripts` directory use `awesome.sh` as a base and uncomment line 24 and replace $wm with your wanted wm to make also change last exec line in the xinitrc
 because as default i not use a login manager i prefer tty.
 
 Create a new file named `${name}.txt` (replace `${name}` with the name of your choice, e.g., `awesome.txt`). This file should be located in the `/pkg-files` directory. It will contain a list of essential packages for the minimal installation option and also should add the line `--END OF MINIMAL INSTALL--` to the list of packages. This addition helps distinguish between essential packages for a minimal installation and additional ones for a full desktop environment setup.

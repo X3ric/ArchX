@@ -1,13 +1,11 @@
 --END OF MINIMAL INSTALL--
 ttf-meslo-nerd-font-powerlevel10k
+autojump
 envycontrol
-xkb-switch
 rmtrash
 pywal-git
-uget-integrator-firefox
-ctpv-git
-papirus-folders-git
 dragon-drop
-ocr-fonts
-python-pdf2image
-mpd-mpris
+python-fuzzysearch
+libinput-gestures
+gtk3-nocsd-git
+python-bs4

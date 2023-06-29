@@ -21,8 +21,10 @@ mkdir "/home/$USERNAME/.cache"
 touch "/home/$USERNAME/.cache/zshhistory"
 sed -n '/'$INSTALL_TYPE'/q;p' ~/ArchX/pkg-files/${DESKTOP_ENV}.txt | while read line
 do
-  if [[ ${line} == '--END OF MINIMAL INSTALL--' ]]
-  then
+  if [[ ${line} == '--END OF MINIMAL INSTALL--' ]]; then
+    continue
+  fi
+  if [[ ${line:0:1} == '#' ]]; then
     continue
   fi
   echo "INSTALLING: ${line}"
@@ -39,16 +41,18 @@ if [[ ! $AUR_HELPER == none ]]; then
     if [[ ${line} == '--END OF MINIMAL INSTALL--' ]]; then
       continue
     fi
+    if [[ ${line:0:1} == '#' ]]; then
+      continue
+    fi
     echo "INSTALLING: ${line}"
     $AUR_HELPER -S --quiet --noconfirm --needed ${line}
   done
 fi
 export PATH=$PATH:~/.local/bin
 if [[ $INSTALL_TYPE == "FULL" ]]; then
-    curl -s https://raw.githubusercontent.com/X3ric/usr/main/.local/share/bin/wifi-menu -o wifi-menu.sh
-    sudo chmod +x ./wifi-menu.sh
+    curl -s https://raw.githubusercontent.com/X3ric/usr/main/.local/share/bin/wifi-menu -o ~/wifi-menu.sh
+    sudo chmod +x ~/wifi-menu.sh
     cp -r ~/ArchX/scripts/${DESKTOP_ENV}.sh ~/
-    cp -r ~/ArchX/scripts/wifi-menu.sh ~/
     cp -r ~/ArchX/configs/.bash_profile ~/
 fi
 echo -ne "

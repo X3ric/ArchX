@@ -139,7 +139,9 @@ ___________________________________________/
 "
 if [ $(whoami) = "root"  ]; then
     groupadd libvirt
-    useradd -m -G wheel,libvirt,power,video -s /bin/bash $USERNAME 
+    groupadd dialout
+    groupadd kvm
+    useradd -m -G wheel,kvm,libvirt,power,video,input,dialout -s /bin/bash $USERNAME 
     echo "$USERNAME created, home directory created, added to wheel and libvirt group, default shell set to /bin/bash"
     echo "$USERNAME:$PASSWORD" | chpasswd
     echo "$USERNAME password set"
