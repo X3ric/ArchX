@@ -11,6 +11,7 @@ pipewire-pulse
 pipewire-jack
 gvfs
 gvfs-smb
+gvfs-mtp
 samba
 nss-mdns
 awesome
@@ -84,6 +85,7 @@ noto-fonts-emoji
 noto-fonts-cjk
 ttf-dejavu
 ttf-fira-code
+terminus-font
 # Python deps 
 python
 python-gobject
@@ -93,8 +95,9 @@ python-mpd2
 python-pytesseract
 tesseract-data-eng
 # Globalmenu deps
+gtk3
 appmenu-gtk-module
 libdbusmenu-gtk2
 libdbusmenu-gtk3
-gtk3
+libdbusmenu-qt5
 bamf

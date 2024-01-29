@@ -93,6 +93,10 @@ _________________________/
     rm -R /home/$choice/.bash_profile
     rm -R /home/$choice/.bash_logout
     rm -R /home/$choice/.bash_history
+    sudo touch /home/$choice/.cache/ttywal
+    sudo touch /etc/vconsole.conf
+    sudo chmod a+rw /etc/vconsole.conf
+    /home/$choice/.local/share/bin/ttywal
     chsh $choice -s /bin/zsh
     reboot
 fi
