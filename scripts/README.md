@@ -10,7 +10,9 @@ This directory contains scripts needed for installation:
 
 - [`3-post-setup.sh`](3-post-setup.sh): Handles post-setup tasks, including configuring the GRUB bootloader, enabling essential services, tweaking system files, and performing cleanup operations for a smooth functioning system.
 
-- [`awesome.sh`](awesome.sh): Executes during the first boot of the installed distribution. It applies final touches, patch fixes, or customizations for awesome. 
+- [`awesome.sh`](awesome.sh): Executes during the first boot of the installed distribution. It applies final touches, patch fixes, or customizations for awesome.
+
+- [`awesome-minimal.sh`](awesome-minimal.sh): Executes during the first boot of the installed distribution. It applies final touches, patch fixes, or customizations for awesome minimal. 
 
 - [`startup.sh`](startup.sh): Serves as an interactive menu before starting the ArchX installation. Allows users to make initial configuration choices. Once selections are made, the ArchX installation process starts, applying the chosen configurations and settings.
 
