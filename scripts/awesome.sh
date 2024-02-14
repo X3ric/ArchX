@@ -47,6 +47,8 @@ _________________________/
     if grep -E "NVIDIA|GeForce" <<< ${gpu_type}; then
     envycontrol -s nvidia --force-comp --coolbits 32
     fi
+
+    sudo systemctl enable gpm.service
     
     #xset r rate 660 25 #Default one 
     xset r rate 560 25 #Input speed

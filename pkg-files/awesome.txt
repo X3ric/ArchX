@@ -23,6 +23,7 @@ unclutter
 blueman
 arandr
 dust
+gpm
 # Cli Tools
 ncdu
 xdotool
