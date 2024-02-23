@@ -6,13 +6,18 @@ Download [Arch.Iso](https://archlinux.org/download/) and create bootable USB and
 
 ### Boot and in prompt type the following commands
 
+<details>
+<summary><h4>set console keymap</h4></summary>
+
 ```
-loadkeys {KeyLayout} // example it,en,es
+loadkeys {Layout} // example it,en,es
+```
+</details>
+
+```
 pacman -Sy && pacman -S --needed git
 git clone https://github.com/X3ric/ArchX
-chmod -R +x ArchX
-cd ArchX
-./archx.sh
+chmod -R +x ArchX && cd ArchX && ./archx.sh
 ```
 
 <details>
