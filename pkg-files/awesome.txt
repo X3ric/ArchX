@@ -97,6 +97,7 @@ python-pytesseract
 tesseract-data-eng
 # Globalmenu deps
 gtk3
+python-attrs
 appmenu-gtk-module
 libdbusmenu-gtk2
 libdbusmenu-gtk3
