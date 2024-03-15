@@ -24,7 +24,7 @@ _________________________/
     #sed -i "\$s|^exec.*|exec $wm|" "/etc/X11/xinit/xinitrc" # replace $wm with the wm you want
     echo "Cange password for root to login with su root"
     passwd root
-    read -p "What is your user?: " choice
+    choice=$(logname)
 
     read -p 'Layout? us,it: ' pos
     localectl set-keymap --no-ask-password $pos
