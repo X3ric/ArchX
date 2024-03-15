@@ -18,7 +18,7 @@ else
 
     echo "Cange password for root to login with su root"
     passwd root
-    read -p "What is your user?: " choice
+    choice=$(logname)
     read -p 'Layout? us,it: ' pos
     localectl set-keymap --no-ask-password $pos
     localectl set-x11-keymap --no-ask-password $pos
