@@ -42,7 +42,6 @@ brightnessctl
 poppler
 aria2
 tmux
-broot
 btop
 git-delta
 glow
